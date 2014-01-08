@@ -1,0 +1,24 @@
+/* Put your css in here */
+.page {
+  /*position: absolute;*/
+  width: 100%;
+}
+
+.back.in, .back.out, .forward.in, .forward.out {
+  -webkit-transition: all 0.5s ease-out;
+}
+/* Out of screen, left side */
+.back.out, .forward {
+  -webkit-transform: translateX(-100%);
+  background: red;
+}
+/* On screen */
+.back.in, .forward.in {
+  -webkit-transform: translateX(0%);
+  background: green;
+}
+/* Out of screen, right side */
+.back, .forward.out {
+  -webkit-transform: translateX(100%);
+  background: blue;
+}

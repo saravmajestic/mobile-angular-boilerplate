@@ -1,0 +1,25 @@
+<html ng-app="plunker" >
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Plunker</title>
+  <link rel="stylesheet" href="css/nav.css">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+  <script type='text/javascript' src="http://code.angularjs.org/1.2.7/angular-route.js"></script>
+  <script src="lib/angular-cache.js"></script>
+  <script src="lib/bindonce.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services/Posts.js"></script>
+  <script src="js/controllers/PostsController.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+<h1>View Transition Test</h1>
+<hr />
+<a ng-click="back()">Back</a><br />
+<a href="#/one">1</a> <a href="#/two">2</a> <a href="#/three">3</a>
+<hr />
+<div my-view in-class="in" out-class="out"></div>
+
+</body>
+</html>
