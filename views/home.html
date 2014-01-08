@@ -1,16 +1,4 @@
 <div class="page">
-	<h1>Posts Page</h1>
-    <input ng-model="message">
-    <br/>
-    {{message}}
-    <br/>
-	<div bindonce ng-repeat="post in posts">
-		<img src="{{post.picture}}"/>
-		<span bo-text="post.uid"></span> - <span bo-text="post['_id']"></span>
-	</div>
-	<a href="javascript:;" ng-click="getData()">Show</a>
-	<br/>
-    <a href="javascript:;" ng-click="clearData()">Clear</a>
-	<br/>
-    <a href="#/three">Go to three</a>
+	<h1>Home Page</h1>
+    <a ng-click="back()" href="javascript:;">Back</a><br />
 </div>

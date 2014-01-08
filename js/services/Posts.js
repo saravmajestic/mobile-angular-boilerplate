@@ -18,7 +18,7 @@ app.service('postservice', function($http, $q, $angularCacheFactory){
 	    if (dataCache.get(id)) {
 	        deferred.resolve(dataCache.get(id));
 	    } else {
-	    	deferred.resolve({"pics" : []});
+	    	deferred.resolve({"pics" : [{picture : "http://media.expedia.com/hotels/1000000/20000/15600/15575/15575_93_l.jpg"}]});
 	    }
 	    return deferred.promise;
 		

@@ -1,5 +1,5 @@
-app.controller('Posts', function ($scope, postservice, $angularCacheFactory) {
-	$scope.message = "one!";
+app.controller('IndexCtrl', function ($scope, postservice, $angularCacheFactory) {
+	$scope.message = "Hello!!!";
 	$scope.posts = [];
 	$scope.getData = function(){
 		var p = postservice.getPostData(1);			
