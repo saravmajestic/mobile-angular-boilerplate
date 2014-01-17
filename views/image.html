@@ -1,0 +1,9 @@
+<div class="pics_wrp"> 
+	<div id="pics"> 
+		<img ng-src="{{images[key]}}"/>
+		 <div ng-repeat="image in images" data-img="true"><img ng-click="key=$index" ng-src="{{image}}"/><input type="hidden" value="" name="images"/></div>
+	</div> 
+	<label for="take_pic" class="sell_cam">Pic</label> 
+	<span><a id="pic_del" href="javascript:;" ng-click="deletePic()">Delete</a></span>
+	<input type="file" ng-model="file" onchange="angular.element(this).scope().changeImage(this);" name="img" id="take_pic" data-role="none"/> 
+</div>

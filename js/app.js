@@ -8,6 +8,20 @@ var app = angular.module('boilerplate', ['ngRoute', 'ngCookies','pasvaz.bindonce
     console.log("App Loaded!!!");
     
 }]);
+/* Handler your errors here... */
+app.provider({
+    $exceptionHandler: function(){
+        var handler = function(exception, cause) {
+            alert(exception);
+            //I need rootScope here
+        };
+
+        this.$get = function() {
+            return handler;
+        };
+    }
+});
+
 app.factory('utils', function ($window) {
 	 //Utility methods which are common across application
 });

@@ -1,0 +1,26 @@
+<html ng-app="imageupload" >
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Image Upload</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+  <script type='text/javascript' src="http://code.angularjs.org/1.2.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-cookies.js"></script>
+  <script>
+  	var app = angular.module('imageupload', ['ngRoute', 'ngCookies']).run(['$rootScope', '$location', function ($rootScope, $location) {
+	    console.log("App Loaded!!!");
+	}]);
+  </script>
+  <script src="../js/directives/imageupload.js"></script>
+  <script src="../js/services/image.js"></script>
+  <script src="../js/controllers/imageupload.js"></script>
+</head>
+
+<body>
+<h1>Angular JS image upload</h1>
+<hr />
+	<form id="form">
+	<div ng-image-upload></div>
+</form>
+</body>
+</html>
