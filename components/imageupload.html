@@ -10,17 +10,20 @@
   	var app = angular.module('imageupload', ['ngRoute', 'ngCookies']).run(['$rootScope', '$location', function ($rootScope, $location) {
 	    console.log("App Loaded!!!");
 	}]);
+	app.controller('MainCntrl', function ($scope) {
+		$scope.images = ["http://docs.angularjs.org/img/angularjs-for-header-only.svg","http://docs.angularjs.org/components/bootstrap/img/glyphicons-halflings-white.png"];
+	});
   </script>
   <script src="../js/directives/imageupload.js"></script>
   <script src="../js/services/image.js"></script>
   <script src="../js/controllers/imageupload.js"></script>
 </head>
 
-<body>
+<body ng-controller="MainCntrl">
 <h1>Angular JS image upload</h1>
 <hr />
-	<form id="form">
-	<div ng-image-upload></div>
+	<form id="form" style="background-color:#ccc">
+	<div ng-image-upload image='images'></div>
 </form>
 </body>
 </html>

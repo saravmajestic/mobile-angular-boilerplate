@@ -1,6 +1,6 @@
 //http://jsfiddle.net/danielzen/utp7j/
 app.controller('ImageUpload', function ($scope, imageservice) {
-	$scope.images = [];//["http://docs.angularjs.org/img/angularjs-for-header-only.svg","http://docs.angularjs.org/components/bootstrap/img/glyphicons-halflings-white.png"];
+//	$scope.images = [];//["http://docs.angularjs.org/img/angularjs-for-header-only.svg","http://docs.angularjs.org/components/bootstrap/img/glyphicons-halflings-white.png"];
 	$scope.key = 0;
 	$scope.changeImage = function(curEl){
 		$scope.$apply(function($scope) {
@@ -20,6 +20,9 @@ app.controller('ImageUpload', function ($scope, imageservice) {
 				}
 			}
 		    });
+	}
+	$scope.changeCover = function(index){
+		$scope.key = index;
 	}
 	$scope.upload = function(image, index){
 		var form = document.querySelector("#form");

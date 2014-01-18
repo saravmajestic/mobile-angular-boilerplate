@@ -13,7 +13,7 @@ app.directive('ngImageUpload', function() {
         restrict : 'EA',
     	controller : "ImageUpload",
     	scope: {
-//            images: "=",
+            'images' : "=image",
 //            'changeImage' : function(){
 //            	alert("changeImage");
 //            }
